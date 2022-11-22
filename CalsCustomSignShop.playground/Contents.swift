@@ -8,13 +8,18 @@ let space: Character = " "
 let exclamation: Character = "!"
 
 func buildSign(for occasion: String, name: String) -> String {
-  return ("Happy \(occasion) \(name)!")
+  return ("Happy"+String(space)+occasion+String(space)+name+String(exclamation))
 }
 
 func graduationFor(name: String, year: Int) -> String {
-  fatalError("Please implement the graduationFor(name:year:) function")
+  return ("Congratulations \(name)!\nClass of \(year)")
 }
 
 func costOf(sign: String) -> Int {
-  fatalError("Please implement the costOf(sign:) function")
+    return 20 + (sign.count*2)
 }
+
+buildSign(for: birthday, name: "Otto")
+buildSign(for: anniversary, name: "Valentina")
+graduationFor(name: "Padma", year: 2020)
+costOf(sign: "Happy Birthday Grandma!")
